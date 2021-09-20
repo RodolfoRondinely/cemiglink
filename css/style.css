@@ -113,3 +113,6 @@ ul li,a{
     background-color: inherit;
     text-decoration: none;
 }
+.alarme{
+    display: none;
+}

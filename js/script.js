@@ -33,8 +33,9 @@ function msn (){
     }
 
    function alerta1() {
-        if (h==06 && m==1 && s==1 ) {
+        if (h==06 && m==30 && s==1) {
             alert(`HORA DE ENVIAR A TELA ${horas}, proximo envio será entre 10:00 e 10:30 !`)
+     
         }
     }
 alerta1()
@@ -60,14 +61,25 @@ function alerta4() {
     }
 }
 alerta4()
+ 
+//Alarme com som para envio de tela 
+
+function alarme() {
+    if (h==06 && m==29 && s==1 || h==10 && m==1 && s==1 ||h==14 && m==29 && s==1 || h==21 && m==1 && s==1 ) {
+    let ad= document.querySelector('audio')
+    ad.play()
+}
+}
+//Chamando a funcao alarme
+alarme()
 }
 
-
+// criando uma variavel timer que chamara a function msn de um em um segundo
 let timer = setInterval(msn,1000)
 
 
 
-
+//adiconando evento click na classe hidenn
 document.querySelector('.hidenn').addEventListener("click", function() {
 
 
@@ -91,6 +103,7 @@ if (esconder.style.width=="300px") {
 
 })
 
+//mudando o estilo da classe hidenn ao clica-la
 let t = document.querySelector('.hidenn img')
 
 t.addEventListener("click", function() {
